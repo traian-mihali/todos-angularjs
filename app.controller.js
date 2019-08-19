@@ -12,6 +12,11 @@ function AppController($scope) {
       $scope.input = "";
     }
   };
+
+  $scope.remove = item => {
+    let index = $scope.array.indexOf(item);
+    $scope.array.splice(index, 1);
+  };
 }
 
 app.controller("AppController", AppController);

@@ -12,21 +12,26 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>TODOS</title>
   </head>
   <body ng-controller="AppController">
-    <h1>TODOS</h1>
+    <h1>Todos</h1>
     <input
       type="text"
       ng-keyup="insert($event)"
       ng-model="input"
       class="form-control"
     />
-    <ul class="list-group">
-      <li class="list-group-item" ng-repeat="item in array track by $index">
+    <div class="list-group">
+      <button
+        type="button"
+        class="list-group-item list-group-item-action btn-outline-danger"
+        ng-repeat="item in array track by $index"
+        ng-click="remove(item)"
+      >
         {{ item }}
-      </li>
-    </ul>
+      </button>
+    </div>
   </body>
 </html>
