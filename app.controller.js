@@ -1,4 +1,4 @@
-const app = angular.module("TODOS", ["ng"]);
+const app = angular.module("TODOS", ["ngAnimate"]);
 
 function AppController($scope) {
   $scope.array = [];
